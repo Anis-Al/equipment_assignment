@@ -1,0 +1,985 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* equipment_assignment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e-20260724\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-29 09:39+0000\n"
+"PO-Revision-Date: 2026-09-29 09:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "%(employee)s cannot receive equipment of another company: %(items)s"
+msgstr "%(employee)s ne peut pas recevoir l'équipement d'une autre société : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "%(employee)s is archived or belongs to a company you are not working in."
+msgstr "%(employee)s est archivé ou appartient à une société dans laquelle vous ne travaillez pas."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_kanban
+msgid "<span class=\"badge text-bg-danger\" invisible=\"state != 'assigned' or not expected_return_date or expected_return_date &gt;= current_date\">Overdue</span>"
+msgstr "<span class=\"badge text-bg-danger\" invisible=\"state != 'assigned' or not expected_return_date or expected_return_date &gt;= current_date\">En retard</span>"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.hr_employee_view_form
+msgid "<span class=\"o_stat_text\">Equipment History</span>"
+msgstr "<span class=\"o_stat_text\">Historique équipements</span>"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "<span class=\"o_stat_text\">Holder</span>"
+msgstr "<span class=\"o_stat_text\">Détenteur</span>"
+
+#. module: equipment_assignment
+#: model:equipment.category,name:equipment_assignment.category_accessories
+msgid "Accessories"
+msgstr "Accessoires"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Accessories delivered, configuration, known defects..."
+msgstr "Accessoires fournis, configuration, défauts connus..."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assign_wizard_view_form
+msgid "Accessories handed over, remarks..."
+msgstr "Accessoires remis, remarques..."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_needaction
+msgid "Action Needed"
+msgstr "Action requise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__active model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'activité d'exception"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_state
+msgid "Activity State"
+msgstr "État de l'activité"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de type d'activité"
+
+#. module: equipment_assignment
+#: model:ir.model.constraint,message:equipment_assignment.constraint_equipment_item_assigned_iff_holder
+msgid "An equipment is assigned if and only if it has a current assignment."
+msgstr "Un équipement est affecté si et seulement s'il a une affectation en cours."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_category_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_category_view_search
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_item_assign_binding_action model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__mode__assign model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assign_wizard_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Assign"
+msgstr "Affecter"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Assign Equipment"
+msgstr "Affecter un équipement"
+
+#. module: equipment_assignment
+#: model:ir.model,name:equipment_assignment.model_equipment_assign_wizard
+msgid "Assign or Transfer Equipment"
+msgstr "Affecter ou transférer un équipement"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_item__state__assigned model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Assigned"
+msgstr "Affecté"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__assigned_by_id
+msgid "Assigned By"
+msgstr "Affecté par"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__assigned_since
+msgid "Assigned Since"
+msgstr "Affecté depuis"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_assignment_analysis_action model:ir.ui.menu,name:equipment_assignment.menu_equipment_reporting_assignments
+msgid "Assignment Analysis"
+msgstr "Analyse des affectations"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_assignment_history_action
+msgid "Assignment History"
+msgstr "Historique des affectations"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_assignment.py:0
+msgid "Assignment history is read-only except for notes. Equipment Managers may correct the dates of returned assignments."
+msgstr "L'historique des affectations est en lecture seule, sauf les notes. Les responsables équipements peuvent corriger les dates des affectations restituées."
+
+#. module: equipment_assignment
+#: model:ir.ui.menu,name:equipment_assignment.menu_equipment_assignments
+msgid "Assignments"
+msgstr "Affectations"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_assignment.py:0
+msgid "Assignments are created with the Assign and Transfer actions on equipment."
+msgstr "Les affectations se créent avec les actions Affecter et Transférer sur l'équipement."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_item__state__available model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__destination_state__available model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Available"
+msgstr "Disponible"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Available since"
+msgstr "Disponible depuis le"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Back to Available"
+msgstr "Remettre disponible"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__can_correct_dates
+msgid "Can Correct Dates"
+msgstr "Peut corriger les dates"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_category_action model:ir.ui.menu,name:equipment_assignment.menu_equipment_categories
+msgid "Categories"
+msgstr "Catégories"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__category_id model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__category_id model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__company_id model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__company_id model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Company"
+msgstr "Société"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__complete_name
+msgid "Complete Name"
+msgstr "Nom complet"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__condition_out model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__condition_in
+msgid "Condition"
+msgstr "État"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__condition_out
+msgid "Condition at Handover"
+msgstr "État à la remise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__condition_in
+msgid "Condition at Return"
+msgstr "État au retour"
+
+#. module: equipment_assignment
+#: model:ir.ui.menu,name:equipment_assignment.menu_equipment_configuration
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: equipment_assignment
+#: model:res.groups,comment:equipment_assignment.group_equipment_manager
+msgid "Configures categories, retires equipment, corrects history and sees reporting."
+msgstr "Configure les catégories, met les équipements au rebut, corrige l'historique et accède aux rapports."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__create_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__create_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__create_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__create_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__create_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__create_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__create_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__create_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__currency_id
+msgid "Currency"
+msgstr "Devise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__current_assignment_id
+msgid "Current Assignment"
+msgstr "Affectation en cours"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Current Situation"
+msgstr "Situation actuelle"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__condition_out__damaged model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_in__damaged model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_out__damaged model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__condition_in__damaged
+msgid "Damaged"
+msgstr "Endommagé"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__department_id model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__current_department_id model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Department"
+msgstr "Département"
+
+#. module: equipment_assignment
+#: model:ir.model,name:equipment_assignment.model_hr_departure_wizard
+msgid "Departure Wizard"
+msgstr "Assistant de départ"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Details"
+msgstr "Détails"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assign_wizard_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_return_wizard_view_form
+msgid "Discard"
+msgstr "Annuler"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__display_name model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__display_name model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__display_name model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__display_name model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__display_name model:ir.model.fields,field_description:equipment_assignment.field_hr_departure_wizard__display_name model:ir.model.fields,field_description:equipment_assignment.field_hr_employee__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__duration_days
+msgid "Duration (days)"
+msgstr "Durée (jours)"
+
+#. module: equipment_assignment
+#: model:ir.model,name:equipment_assignment.model_hr_employee model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__employee_id model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__employee_id model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Employee"
+msgstr "Employé"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_item_action model:ir.model,name:equipment_assignment.model_equipment_item model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__equipment_ids model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__equipment_id model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__item_count model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__equipment_ids model:ir.module.category,name:equipment_assignment.module_category_equipment model:ir.ui.menu,name:equipment_assignment.menu_equipment_items model:ir.ui.menu,name:equipment_assignment.menu_equipment_root model:res.groups.privilege,name:equipment_assignment.res_groups_privilege_equipment model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_category_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search model_terms:ir.ui.view,arch_db:equipment_assignment.hr_employee_view_form
+msgid "Equipment"
+msgstr "Équipements"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_item_analysis_action model:ir.ui.menu,name:equipment_assignment.menu_equipment_reporting_items
+msgid "Equipment Analysis"
+msgstr "Analyse des équipements"
+
+#. module: equipment_assignment
+#: model:ir.model,name:equipment_assignment.model_equipment_assignment
+msgid "Equipment Assignment"
+msgstr "Affectation des équipements"
+
+#. module: equipment_assignment
+#: model:ir.model,name:equipment_assignment.model_equipment_category
+msgid "Equipment Category"
+msgstr "Catégorie d'équipement"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_hr_employee__equipment_item_count
+msgid "Equipment Held"
+msgstr "Équipements détenus"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_hr_departure_wizard__held_equipment_item_ids
+msgid "Equipment Still Held"
+msgstr "Équipements encore détenus"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Equipment with an assignment history cannot be deleted. Retire it instead."
+msgstr "Un équipement ayant un historique d'affectation ne peut pas être supprimé. Mettez-le au rebut."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__expected_return_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__expected_return_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__expected_return_date
+msgid "Expected Return Date"
+msgstr "Date de retour prévue"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__condition_out__fair model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_in__fair model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_out__fair model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__condition_in__fair
+msgid "Fair"
+msgstr "Correct"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome, par ex. fa-tasks"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__condition_out__good model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_in__good model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_out__good model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__condition_in__good
+msgid "Good"
+msgstr "Bon"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_form
+msgid "Handover"
+msgstr "Remise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__date_start model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__date_start model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Handover Date"
+msgstr "Date de remise"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Handover Month"
+msgstr "Mois de remise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__note_out
+msgid "Handover Note"
+msgstr "Note de remise"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__assignment_count model:ir.ui.menu,name:equipment_assignment.menu_equipment_assignments_history model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "History"
+msgstr "Historique"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__current_employee_id model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Holder"
+msgstr "Détenteur"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__id model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__id model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__id model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__id model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__id model:ir.model.fields,field_description:equipment_assignment.field_hr_departure_wizard__id model:ir.model.fields,field_description:equipment_assignment.field_hr_employee__id
+msgid "ID"
+msgstr "ID"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité d'exception."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Idle 90+ Days"
+msgstr "Inutilisé depuis 90+ jours"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__message_has_error model:ir.model.fields,help:equipment_assignment.field_equipment_item__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur d'envoi."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__image_1920
+msgid "Image"
+msgstr "Image"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__image_1024
+msgid "Image 1024"
+msgstr "Image 1024"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__image_128
+msgid "Image 128"
+msgstr "Image 128"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__image_256
+msgid "Image 256"
+msgstr "Image 256"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__image_512
+msgid "Image 512"
+msgstr "Image 512"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_item__state__maintenance model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__destination_state__maintenance model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "In Maintenance"
+msgstr "En maintenance"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_is_follower
+msgid "Is Follower"
+msgstr "Est abonné"
+
+#. module: equipment_assignment
+#: model:equipment.category,name:equipment_assignment.category_it_laptops
+msgid "Laptops"
+msgstr "Ordinateurs portables"
+
+#. module: equipment_assignment
+#: model_terms:ir.actions.act_window,help:equipment_assignment.equipment_item_action
+msgid "Laptops, phones, tools: register each item once, then hand it over and get it back in two clicks."
+msgstr "Ordinateurs, téléphones, outils : enregistrez chaque équipement une fois, puis remettez-le et récupérez-le en deux clics."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Last 12 Months"
+msgstr "12 derniers mois"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__last_return_date
+msgid "Last Return Date"
+msgstr "Date du dernier retour"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__write_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__write_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__write_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__write_uid model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__write_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__write_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__write_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__write_date model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__write_date
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+#. module: equipment_assignment
+#: model:res.groups,name:equipment_assignment.group_equipment_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur d'envoi du message"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_return_wizard_view_form
+msgid "Missing charger, scratches..."
+msgstr "Chargeur manquant, rayures..."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__mode
+msgid "Mode"
+msgstr "Mode"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Échéance de mon activité"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "My Handovers"
+msgstr "Mes remises"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__name model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__name model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0 model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__condition_out__new model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_in__new model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__condition_out__new model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_return_wizard__condition_in__new
+msgid "New"
+msgstr "Nouveau"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "New equipment is always created as available; assign it afterwards."
+msgstr "Un nouvel équipement est toujours créé disponible ; affectez-le ensuite."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Prochain événement de calendrier"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Échéance de la prochaine activité"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de la prochaine activité"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assign_wizard__note model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__note model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__note
+msgid "Note"
+msgstr "Note"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Notes"
+msgstr "Notes"
+
+#. module: equipment_assignment
+#: model_terms:ir.actions.act_window,help:equipment_assignment.equipment_assignment_ongoing_action
+msgid "Nothing is handed over right now"
+msgstr "Aucun équipement n'est remis pour le moment"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec erreur d'envoi"
+
+#. module: equipment_assignment
+#: model:res.groups,name:equipment_assignment.group_equipment_officer
+msgid "Officer"
+msgstr "Agent"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__state__ongoing model:ir.ui.menu,name:equipment_assignment.menu_equipment_assignments_ongoing model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Ongoing"
+msgstr "En cours"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_assignment_ongoing_action
+msgid "Ongoing Assignments"
+msgstr "Affectations en cours"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_assignment.py:0
+msgid "Ongoing assignments cannot be deleted; return the equipment first: %(items)s"
+msgstr "Les affectations en cours ne peuvent pas être supprimées ; restituez d'abord l'équipement : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only Equipment Managers can retire or restore retired equipment."
+msgstr "Seuls les responsables équipements peuvent mettre au rebut ou restaurer un équipement."
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only assigned equipment can be returned. Not assigned: %(items)s"
+msgstr "Seuls les équipements affectés peuvent être restitués. Non affectés : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only assigned equipment can be transferred. Use Assign for: %(items)s"
+msgstr "Seuls les équipements affectés peuvent être transférés. Utilisez Affecter pour : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only available equipment can be assigned. Return or restore these first: %(items)s"
+msgstr "Seuls les équipements disponibles peuvent être affectés. Restituez ou restaurez d'abord : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only available equipment can be sent to maintenance. Return these first: %(items)s"
+msgstr "Seuls les équipements disponibles peuvent partir en maintenance. Restituez d'abord : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only available or in-maintenance equipment can be retired. Return these first: %(items)s"
+msgstr "Seuls les équipements disponibles ou en maintenance peuvent être mis au rebut. Restituez d'abord : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Only equipment in maintenance or retired can be set back to available: %(items)s"
+msgstr "Seuls les équipements en maintenance ou au rebut peuvent être remis disponibles : %(items)s"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__is_overdue model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__is_overdue model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Overdue"
+msgstr "En retard"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Overdue Return"
+msgstr "Retour en retard"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__parent_id
+msgid "Parent Category"
+msgstr "Catégorie parente"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__parent_path
+msgid "Parent Path"
+msgstr "Chemin parent"
+
+#. module: equipment_assignment
+#: model:equipment.category,name:equipment_assignment.category_it_phones
+msgid "Phones"
+msgstr "Téléphones"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__purchase_date
+msgid "Purchase Date"
+msgstr "Date d'achat"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__purchase_value
+msgid "Purchase Value"
+msgstr "Valeur d'achat"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Purchase Year"
+msgstr "Année d'achat"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__destination_state
+msgid "Put Back As"
+msgstr "Remettre en"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__rating_ids
+msgid "Ratings"
+msgstr "Évaluations"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_hr_departure_wizard__return_equipment_items
+msgid "Record the return of every item still held, dated on the departure date (or today if later)."
+msgstr "Enregistrer le retour de chaque équipement encore détenu, à la date de départ (ou aujourd'hui si elle est postérieure)."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__reference
+msgid "Reference"
+msgstr "Référence"
+
+#. module: equipment_assignment
+#: model_terms:ir.actions.act_window,help:equipment_assignment.equipment_item_action
+msgid "Register your first equipment"
+msgstr "Enregistrez votre premier équipement"
+
+#. module: equipment_assignment
+#: model:res.groups,comment:equipment_assignment.group_equipment_officer
+msgid "Registers equipment, hands it over and records returns."
+msgstr "Enregistre les équipements, les remet et enregistre les retours."
+
+#. module: equipment_assignment
+#: model:ir.ui.menu,name:equipment_assignment.menu_equipment_reporting
+msgid "Reporting"
+msgstr "Analyse"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Restore"
+msgstr "Restaurer"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Retire"
+msgstr "Mettre au rebut"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Retire this equipment? It will be archived and disappear from the default views."
+msgstr "Mettre cet équipement au rebut ? Il sera archivé et disparaîtra des vues par défaut."
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_item__state__retired model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Retired"
+msgstr "Au rebut"
+
+#. module: equipment_assignment
+#: model:ir.actions.act_window,name:equipment_assignment.equipment_item_return_binding_action model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_list model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_return_wizard_view_form
+msgid "Return"
+msgstr "Restituer"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__date_end model:ir.model.fields,field_description:equipment_assignment.field_equipment_return_wizard__date_end
+msgid "Return Date"
+msgstr "Date de retour"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0 model:ir.model,name:equipment_assignment.model_equipment_return_wizard
+msgid "Return Equipment"
+msgstr "Restituer un équipement"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_hr_departure_wizard__return_equipment_items model_terms:ir.ui.view,arch_db:equipment_assignment.hr_departure_wizard_view_form
+msgid "Return Equipment Items"
+msgstr "Restituer les équipements"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Return Month"
+msgstr "Mois de retour"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__note_in
+msgid "Return Note"
+msgstr "Note de retour"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__returned_by_id
+msgid "Return Received By"
+msgstr "Retour reçu par"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assignment__state__returned model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Returned"
+msgstr "Restitué"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assignment_view_search
+msgid "Returned Damaged"
+msgstr "Restitué endommagé"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Returned equipment goes back to Available or In Maintenance."
+msgstr "Un équipement restitué redevient Disponible ou passe En maintenance."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Erreur d'envoi SMS"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Send to Maintenance"
+msgstr "Envoyer en maintenance"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_category__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__serial_number
+msgid "Serial Number"
+msgstr "Numéro de série"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Someone else assigned some of these items at the same time: %(items)s. Reload and try again."
+msgstr "Quelqu'un d'autre a affecté certains de ces équipements au même moment : %(items)s. Rechargez la page et réessayez."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_assignment__state model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__state model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Status"
+msgstr "Statut"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : la date d'échéance est déjà dépassée\n"
+"Aujourd'hui : la date de l'activité est aujourd'hui\n"
+"Planifiée : activités futures."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.hr_departure_wizard_view_form
+msgid "Still holding equipment:"
+msgstr "Détient encore des équipements :"
+
+#. module: equipment_assignment
+#: model:ir.model.constraint,message:equipment_assignment.constraint_equipment_item_reference_company_uniq
+msgid "The equipment reference must be unique per company."
+msgstr "La référence de l'équipement doit être unique par société."
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "The handover date cannot be earlier than the last return date of: %(items)s"
+msgstr "La date de remise ne peut pas être antérieure à la date du dernier retour de : %(items)s"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "The handover date cannot be in the future."
+msgstr "La date de remise ne peut pas être dans le futur."
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "The return date cannot be earlier than the handover date of: %(items)s"
+msgstr "La date de retour ne peut pas être antérieure à la date de remise de : %(items)s"
+
+#. module: equipment_assignment
+#: model:ir.model.constraint,message:equipment_assignment.constraint_equipment_assignment_date_order
+msgid "The return date cannot be earlier than the handover date."
+msgstr "La date de retour ne peut pas être antérieure à la date de remise."
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "The return date cannot be in the future."
+msgstr "La date de retour ne peut pas être dans le futur."
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "The status and holder of an equipment change only through Assign, Return, Transfer, Send to maintenance and Retire."
+msgstr "Le statut et le détenteur d'un équipement ne changent que via Affecter, Restituer, Transférer, Envoyer en maintenance et Mettre au rebut."
+
+#. module: equipment_assignment
+#: model:ir.model.constraint,message:equipment_assignment.constraint_equipment_assignment_unique_open_assignment
+msgid "This equipment already has an ongoing assignment."
+msgstr "Cet équipement a déjà une affectation en cours."
+
+#. module: equipment_assignment
+#: model:ir.model.constraint,message:equipment_assignment.constraint_equipment_item_serial_company_uniq
+msgid "This serial number is already used by another equipment of the same company."
+msgstr "Ce numéro de série est déjà utilisé par un autre équipement de la même société."
+
+#. module: equipment_assignment
+#: model:equipment.category,name:equipment_assignment.category_tools
+msgid "Tools"
+msgstr "Outillage"
+
+#. module: equipment_assignment
+#: model:ir.model.fields.selection,name:equipment_assignment.selection__equipment_assign_wizard__mode__transfer model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_assign_wizard_view_form model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "Transfer"
+msgstr "Transférer"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_item.py:0
+msgid "Transfer Equipment"
+msgstr "Transférer un équipement"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type de l'activité d'exception sur l'enregistrement."
+
+#. module: equipment_assignment
+#: model_terms:ir.actions.act_window,help:equipment_assignment.equipment_assignment_ongoing_action
+msgid "Use Assign on an available equipment to hand it over to an employee."
+msgstr "Utilisez Affecter sur un équipement disponible pour le remettre à un employé."
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__vendor_id
+msgid "Vendor"
+msgstr "Fournisseur"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__warranty_end_date
+msgid "Warranty End Date"
+msgstr "Fin de garantie"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Warranty Expired"
+msgstr "Garantie expirée"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_search
+msgid "Warranty Expiring (60 days)"
+msgstr "Garantie expirant (60 jours)"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,field_description:equipment_assignment.field_equipment_item__website_message_ids
+msgid "Website Messages"
+msgstr "Messages du site web"
+
+#. module: equipment_assignment
+#: model:ir.model.fields,help:equipment_assignment.field_equipment_item__website_message_ids
+msgid "Website communication history"
+msgstr "Historique des communications du site web"
+
+#. module: equipment_assignment
+#. odoo-python
+#: code:addons/equipment_assignment/models/equipment_category.py:0
+msgid "You cannot create recursive categories."
+msgstr "Vous ne pouvez pas créer de catégories récursives."
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_item_view_form
+msgid "e.g. Dell Latitude 5440"
+msgstr "ex. Dell Latitude 5440"
+
+#. module: equipment_assignment
+#: model_terms:ir.ui.view,arch_db:equipment_assignment.equipment_category_view_form
+msgid "e.g. Laptops"
+msgstr "ex. Ordinateurs portables"

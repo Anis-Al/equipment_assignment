@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_equipment_category_officer,equipment.category officer,model_equipment_category,group_equipment_officer,1,0,0,0
+access_equipment_category_manager,equipment.category manager,model_equipment_category,group_equipment_manager,1,1,1,1
+access_equipment_item_officer,equipment.item officer,model_equipment_item,group_equipment_officer,1,1,1,0
+access_equipment_item_manager,equipment.item manager,model_equipment_item,group_equipment_manager,1,1,1,1
+access_equipment_assignment_officer,equipment.assignment officer,model_equipment_assignment,group_equipment_officer,1,1,1,0
+access_equipment_assignment_manager,equipment.assignment manager,model_equipment_assignment,group_equipment_manager,1,1,1,1
+access_equipment_assign_wizard_officer,equipment.assign.wizard officer,model_equipment_assign_wizard,group_equipment_officer,1,1,1,0
+access_equipment_return_wizard_officer,equipment.return.wizard officer,model_equipment_return_wizard,group_equipment_officer,1,1,1,0

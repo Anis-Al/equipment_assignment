@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_groups_privilege_equipment" model="res.groups.privilege">
+        <field name="name">Equipment</field>
+        <field name="sequence">30</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <record id="group_equipment_officer" model="res.groups">
+        <field name="name">Officer</field>
+        <field name="sequence">10</field>
+        <field name="privilege_id" ref="res_groups_privilege_equipment"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">Registers equipment, hands it over and records returns.</field>
+    </record>
+
+    <record id="group_equipment_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="sequence">20</field>
+        <field name="privilege_id" ref="res_groups_privilege_equipment"/>
+        <field name="implied_ids" eval="[(4, ref('group_equipment_officer'))]"/>
+        <field name="user_ids" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        <field name="comment">Configures categories, retires equipment, corrects history and sees reporting.</field>
+    </record>
+
+    <data noupdate="1">
+        <record id="equipment_item_company_rule" model="ir.rule">
+            <field name="name">Equipment: multi-company</field>
+            <field name="model_id" ref="model_equipment_item"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="equipment_assignment_company_rule" model="ir.rule">
+            <field name="name">Equipment Assignment: multi-company</field>
+            <field name="model_id" ref="model_equipment_assignment"/>
+            <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

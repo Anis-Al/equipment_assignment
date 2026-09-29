@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="equipment_assign_wizard_view_form" model="ir.ui.view">
+        <field name="name">equipment.assign.wizard.form</field>
+        <field name="model">equipment.assign.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="mode" invisible="1"/>
+                <group>
+                    <group>
+                        <field name="equipment_ids" widget="many2many_tags" readonly="1"/>
+                        <field name="employee_id" options="{'no_create': True}"/>
+                    </group>
+                    <group>
+                        <field name="date_start"/>
+                        <field name="expected_return_date"/>
+                        <field name="condition_out"/>
+                    </group>
+                </group>
+                <field name="note" placeholder="Accessories handed over, remarks..."/>
+                <footer>
+                    <button name="action_confirm" type="object" string="Assign" class="oe_highlight"
+                            invisible="mode == 'transfer'" data-hotkey="q"/>
+                    <button name="action_confirm" type="object" string="Transfer" class="oe_highlight"
+                            invisible="mode != 'transfer'" data-hotkey="q"/>
+                    <button string="Discard" special="cancel" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

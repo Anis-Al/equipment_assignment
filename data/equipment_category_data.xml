@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="category_it_laptops" model="equipment.category">
+            <field name="name">Laptops</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="category_it_phones" model="equipment.category">
+            <field name="name">Phones</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="category_tools" model="equipment.category">
+            <field name="name">Tools</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="category_accessories" model="equipment.category">
+            <field name="name">Accessories</field>
+            <field name="sequence">4</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_departure_wizard_view_form" model="ir.ui.view">
+        <field name="name">hr.departure.wizard.form.equipment</field>
+        <field name="model">hr.departure.wizard</field>
+        <field name="inherit_id" ref="hr.hr_departure_wizard_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <div class="alert alert-warning mb-0" role="alert" invisible="not held_equipment_item_ids"
+                     groups="equipment_assignment.group_equipment_officer">
+                    Still holding equipment:
+                    <field name="held_equipment_item_ids" widget="many2many_tags" readonly="1" class="d-inline"/>
+                </div>
+            </xpath>
+            <xpath expr="//div[@id='activities']" position="inside">
+                <div groups="equipment_assignment.group_equipment_officer" invisible="not held_equipment_item_ids">
+                    <field name="return_equipment_items"/>
+                    <label for="return_equipment_items" string="Return Equipment Items"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

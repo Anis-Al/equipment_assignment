@@ -1,0 +1,28 @@
+{
+    'name': 'Equipment Assignment',
+    'version': '19.0.1.0.0',
+    'summary': 'Track who holds which equipment, with an immutable assignment history',
+    'category': 'Human Resources/Equipment',
+    'author': 'Anis Alim',
+    'depends': ['hr'],
+    'data': [
+        'security/equipment_security.xml',
+        'security/ir.model.access.csv',
+        'data/equipment_category_data.xml',
+        'data/ir_sequence_data.xml',
+        'wizard/equipment_assign_wizard_views.xml',
+        'wizard/equipment_return_wizard_views.xml',
+        'wizard/hr_departure_wizard_views.xml',
+        'views/equipment_category_views.xml',
+        'views/equipment_item_views.xml',
+        'views/equipment_assignment_views.xml',
+        'views/hr_employee_views.xml',
+        'views/equipment_menus.xml',
+    ],
+    'demo': [
+        'demo/equipment_demo.xml',
+    ],
+    'application': True,
+    'installable': True,
+    'license': 'LGPL-3',
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_equipment_root" name="Equipment" sequence="75"
+              web_icon="equipment_assignment,static/description/icon.png"
+              groups="group_equipment_officer"/>
+
+    <menuitem id="menu_equipment_items" name="Equipment" parent="menu_equipment_root" sequence="10"
+              action="equipment_item_action"/>
+
+    <menuitem id="menu_equipment_assignments" name="Assignments" parent="menu_equipment_root" sequence="20"/>
+    <menuitem id="menu_equipment_assignments_ongoing" name="Ongoing" parent="menu_equipment_assignments" sequence="10"
+              action="equipment_assignment_ongoing_action"/>
+    <menuitem id="menu_equipment_assignments_history" name="History" parent="menu_equipment_assignments" sequence="20"
+              action="equipment_assignment_history_action"/>
+
+    <menuitem id="menu_equipment_reporting" name="Reporting" parent="menu_equipment_root" sequence="30"
+              groups="group_equipment_manager"/>
+    <menuitem id="menu_equipment_reporting_items" name="Equipment Analysis" parent="menu_equipment_reporting"
+              sequence="10" action="equipment_item_analysis_action"/>
+    <menuitem id="menu_equipment_reporting_assignments" name="Assignment Analysis" parent="menu_equipment_reporting"
+              sequence="20" action="equipment_assignment_analysis_action"/>
+
+    <menuitem id="menu_equipment_configuration" name="Configuration" parent="menu_equipment_root" sequence="90"
+              groups="group_equipment_manager"/>
+    <menuitem id="menu_equipment_categories" name="Categories" parent="menu_equipment_configuration" sequence="10"
+              action="equipment_category_action"/>
+</odoo>

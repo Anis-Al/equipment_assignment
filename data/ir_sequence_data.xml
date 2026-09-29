@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="seq_equipment_item" model="ir.sequence">
+            <field name="name">Equipment Reference</field>
+            <field name="code">equipment.item</field>
+            <field name="prefix">EQ-</field>
+            <field name="padding">6</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

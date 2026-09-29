@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vendor_condor" model="res.partner">
+        <field name="name">Condor Electronics</field>
+        <field name="is_company" eval="True"/>
+        <field name="city">Bordj Bou Arréridj</field>
+        <field name="country_id" ref="base.dz"/>
+    </record>
+
+    <record id="employee_karim" model="hr.employee">
+        <field name="name">Karim Benali</field>
+        <field name="job_title">Technicien informatique</field>
+        <field name="department_id" ref="hr.dep_rd"/>
+    </record>
+    <record id="employee_yacine" model="hr.employee">
+        <field name="name">Yacine Hadj-Ali</field>
+        <field name="job_title">Commercial terrain (Oran)</field>
+        <field name="department_id" ref="hr.dep_sales"/>
+    </record>
+    <record id="employee_samira" model="hr.employee">
+        <field name="name">Samira Meziane</field>
+        <field name="job_title">Commerciale (Constantine)</field>
+        <field name="department_id" ref="hr.dep_sales"/>
+    </record>
+
+    <record id="item_01" model="equipment.item">
+        <field name="name">PC portable HP ProBook 450 G10</field>
+        <field name="category_id" ref="category_it_laptops"/>
+        <field name="serial_number">5CD4101AL1</field>
+        <field name="purchase_date" eval="(DateTime.today() - relativedelta(days=420)).strftime('%Y-%m-%d')"/>
+        <field name="purchase_value">145000</field>
+        <field name="warranty_end_date" eval="(DateTime.today() + relativedelta(days=40)).strftime('%Y-%m-%d')"/>
+    </record>
+    <record id="item_02" model="equipment.item">
+        <field name="name">PC portable Lenovo ThinkPad E14</field>
+        <field name="category_id" ref="category_it_laptops"/>
+        <field name="serial_number">PF4DZ102</field>
+        <field name="purchase_date" eval="(DateTime.today() - relativedelta(days=420)).strftime('%Y-%m-%d')"/>
+        <field name="purchase_value">120000</field>
+        <field name="warranty_end_date" eval="(DateTime.today() + relativedelta(days=310)).strftime('%Y-%m-%d')"/>
+    </record>
+    <record id="item_04" model="equipment.item">
+        <field name="name">Smartphone Condor</field>
+        <field name="category_id" ref="category_it_phones"/>
+        <field name="serial_number">IMEI 356789104400004</field>
+        <field name="purchase_date" eval="(DateTime.today() - relativedelta(days=400)).strftime('%Y-%m-%d')"/>
+        <field name="purchase_value">42000</field>
+        <field name="warranty_end_date" eval="(DateTime.today() - relativedelta(days=30)).strftime('%Y-%m-%d')"/>
+        <field name="vendor_id" ref="vendor_condor"/>
+    </record>
+    <record id="item_10" model="equipment.item">
+        <field name="name">Onduleur APC 1500 VA</field>
+        <field name="category_id" ref="category_accessories"/>
+        <field name="serial_number">APC-1010</field>
+        <field name="purchase_date" eval="(DateTime.today() - relativedelta(days=1500)).strftime('%Y-%m-%d')"/>
+        <field name="purchase_value">38000</field>
+        <field name="note">&lt;p&gt;Batterie hors service après les coupures de l'été.&lt;/p&gt;</field>
+    </record>
+
+    <function model="equipment.item" name="_assign_to" eval="[[ref('item_01'), ref('item_02')], {'employee_id': ref('employee_karim'), 'date_start': (DateTime.today() - relativedelta(days=400)).strftime('%Y-%m-%d'), 'condition_out': 'new'}]"/>
+    <function model="equipment.item" name="_return_current" eval="[[ref('item_01'), ref('item_02')], (DateTime.today() - relativedelta(days=300)).strftime('%Y-%m-%d'), 'good']"/>
+    <function model="equipment.item" name="_assign_to" eval="[[ref('item_01')], {'employee_id': ref('employee_yacine'), 'date_start': (DateTime.today() - relativedelta(days=120)).strftime('%Y-%m-%d')}]"/>
+    <function model="equipment.item" name="_transfer_to" eval="[[ref('item_01')], {'employee_id': ref('employee_samira'), 'date_start': (DateTime.today() - relativedelta(days=20)).strftime('%Y-%m-%d'), 'expected_return_date': (DateTime.today() - relativedelta(days=5)).strftime('%Y-%m-%d'), 'note_out': 'Mutation agence Constantine'}]"/>
+    <function model="equipment.item" name="_assign_to" eval="[[ref('item_04')], {'employee_id': ref('employee_yacine'), 'date_start': (DateTime.today() - relativedelta(days=200)).strftime('%Y-%m-%d'), 'condition_out': 'new'}]"/>
+    <function model="equipment.item" name="_return_current" eval="[[ref('item_04')], (DateTime.today() - relativedelta(days=45)).strftime('%Y-%m-%d'), 'damaged', 'maintenance', 'Écran fissuré']"/>
+    <function model="equipment.item" name="action_retire" eval="[[ref('item_10')]]"/>
+</odoo>
